@@ -44,5 +44,7 @@ After training on 80% of the data, I evaluated both models on the remaining 20% 
 ### Performance Visualization
 
 To better understand the model's performance, I generated a confusion matrix, which shows the breakdown of correct and incorrect predictions.
+### Performance Visualization
 
-![Confusion Matrix](IMDb.png)
+To better understand the model's performance, I generated a confusion matrix, which shows the breakdown of correct and incorrect predictions.
+![Confusion Matrix](confusion_matrix.png)
