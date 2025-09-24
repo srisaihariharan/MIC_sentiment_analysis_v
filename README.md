@@ -48,3 +48,7 @@ To better understand the model's performance, I generated a confusion matrix, wh
 
 <img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/ab26f93f-8f01-4363-9af2-7f88b11a2144" />
 
+---
+**Note: If the notebook below does not render correctly on GitHub, please [view it on nbviewer](https://nbviewer.org/github/srisaihariharan/MIC_sentiment_analysis_v/tree/main/)).**
+---
+
