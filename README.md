@@ -47,4 +47,5 @@ To better understand the model's performance, I generated a confusion matrix, wh
 ### Performance Visualization
 
 To better understand the model's performance, I generated a confusion matrix, which shows the breakdown of correct and incorrect predictions.
+
 ![Confusion Matrix](confusion_matrix.png)
