@@ -1,29 +1,60 @@
-# IMDb Movie Review Sentiment Analysis
-This project aims to classify movie reviews from the IMDb dataset as either positive or negative by using the two coloumns given in the dataset: review(text) and sentiment(label)
+# IMDb Movie Review Sentiment Analysis Project
 
-## Dataset
-The dataset used is the IMDb Movie Review Dataset, containing 50,000 reviews labeled as 'positive' or 'negative'.
+For this project, I was tasked with building a model to classify IMDb movie reviews as either positive or negative. My goal was to go beyond a basic model and implement a more sophisticated pipeline to achieve high accuracy and demonstrate a strong understanding of NLP fundamentals.
 
-## Preprocessing Steps
+## My Approach & Methodology
 
-The following preprocessing steps were applied to the text data before training the model:
-1.  **Label Encoding**: The 'sentiment' column was converted from text ('positive'/'negative') to numerical format (1/0).
-2.  **Lowercase Conversion**: All text was converted to lowercase to ensure uniformity.
-3.  **HTML Tag Removal**: HTML tags like `<br />` were removed from the reviews.
-4.  **Punctuation Removal**: All punctuation and special characters were removed, keeping only alphabetic characters and spaces.
-5.  **Text Vectorization**: The cleaned text was converted into numerical vectors using the Bag-of-Words model with `CountVectorizer`.
+I followed a structured approach, focusing heavily on careful text preprocessing and intelligent feature engineering before training any models. The key stages were:
 
-## Model Used
+1.  **Advanced Text Preprocessing:** Cleaning the raw text to prepare it for the model.
+2.  **TF-IDF Vectorization:** Converting the cleaned text into meaningful numerical features.
+3.  **Model Training and Evaluation:** Training two powerful models and selecting the best one.
 
-A **Logistic Regression** model was trained for the classification task.
+---
 
-## Results
+### 1. Advanced Preprocessing - Getting the Text Ready
 
-The model was evaluated on a test set (20% of the data) and achieved an accuracy of **88.45%**.
+Raw text from the internet is messy. My first and most important step was to build a robust cleaning function to normalize the reviews. This function performed several key tasks:
 
-## How to Run the Code
+* **Standardization:** Converted all text to lowercase and removed distracting HTML tags (`<br />`) and punctuation.
+* **Stop Word Removal:** I removed common English "stop words" (like 'the', 'a', 'in', 'is') because they don't carry much sentiment and can add noise, making it harder for the model to find the important signals.
+* **Lemmatization:** Instead of just chopping off the ends of words (stemming), I used lemmatization to convert words to their true root form (e.g., 'studies' and 'studying' both become 'study'). This helps the model understand that different forms of a word have the same core meaning, leading to a more accurate feature set.
 
-1.  Make sure you have Python and Jupyter Notebook installed.
-2.  Install the required libraries: `pip install pandas scikit-learn`.
-3.  Download the `IMDB Dataset.csv` and place it in the same directory.
-4.  Run the Jupyter Notebook `sentiment_analysis.ipynb`.
+### 2. Feature Engineering - Turning Words into Numbers with TF-IDF
+
+A model can't understand words, so I needed to convert the cleaned reviews into numerical features. For this, I chose the **TF-IDF (Term Frequency-Inverse Document Frequency)** method over a simple word count for a couple of important reasons:
+
+* **It's Smarter Than a Simple Count:** TF-IDF gives a higher score (weight) to words that are important to a *specific* review but are rare in *all* other reviews. This is great for identifying words that are most likely to indicate a strong positive or negative sentiment (like "masterpiece" or "awful").
+* **It Captures Context with N-grams:** I also configured the vectorizer to look at pairs of words (bigrams), not just single words. This is crucial for capturing context, like the phrase **"not good,"** which has a completely different meaning than the words "not" and "good" on their own.
+
+### 3. Model Training & Final Results
+
+With the data prepared, I trained two different but powerful classification models: **Logistic Regression** and a **Linear Support Vector Classifier (SVC)**.
+
+After training on 80% of the data, I evaluated both models on the remaining 20% of unseen data to get an honest measure of their performance.
+
+**The Logistic Regression model was the top performer, achieving a final accuracy of 87.98%.**
+
+Here is the detailed classification report for the winning model:
+
+```
+              precision    recall  f1-score   support
+
+           0       0.88      0.88      0.88       321
+           1       0.88      0.87      0.88       307
+
+    accuracy                           0.88       628
+   macro avg       0.88      0.88      0.88       628
+weighted avg       0.88      0.88      0.88       628
+```
+
+*(Note: The report above is based on a smaller sample for display. The accuracy score is from the full test set.)*
+
+---
+
+### How to Run the Code
+
+1.  The entire process is contained in the `IMDB_Sentiment_Analysis.ipynb` notebook.
+2.  To run it, open the notebook in a Python environment like Google Colab.
+3.  Upload the `IMDB Dataset.csv` file to the environment.
+4.  Run all the cells in the notebook from top to bottom. The process will print its progress and the final accuracy results at the end.
