@@ -41,3 +41,8 @@ After training on 80% of the data, I evaluated both models on the remaining 20% 
 2.  To run it, open the notebook in a Python environment like Google Colab.
 3.  Upload the `IMDB Dataset.csv` file to the environment.
 4.  Run all the cells in the notebook from top to bottom. The process will print its progress and the final accuracy results at the end.
+### Performance Visualization
+
+To better understand the model's performance, I generated a confusion matrix, which shows the breakdown of correct and incorrect predictions.
+
+![Confusion Matrix](IMDb.png)
