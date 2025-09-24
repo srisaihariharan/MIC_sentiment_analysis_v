@@ -34,24 +34,7 @@ With the data prepared, I trained two different but powerful classification mode
 After training on 80% of the data, I evaluated both models on the remaining 20% of unseen data to get an honest measure of their performance.
 
 **The Logistic Regression model was the top performer, achieving a final accuracy of 87.98%.**
-
-Here is the detailed classification report for the winning model:
-
-```
-              precision    recall  f1-score   support
-
-           0       0.88      0.88      0.88       321
-           1       0.88      0.87      0.88       307
-
-    accuracy                           0.88       628
-   macro avg       0.88      0.88      0.88       628
-weighted avg       0.88      0.88      0.88       628
-```
-
-*(Note: The report above is based on a smaller sample for display. The accuracy score is from the full test set.)*
-
 ---
-
 ### How to Run the Code
 
 1.  The entire process is contained in the `IMDB_Sentiment_Analysis.ipynb` notebook.
