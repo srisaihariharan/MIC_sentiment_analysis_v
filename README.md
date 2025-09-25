@@ -34,7 +34,17 @@ With the data prepared, I trained two different but powerful classification mode
 After training on 80% of the data, I evaluated both models on the remaining 20% of unseen data to get an honest measure of their performance.
 ### 4. Project structure 
 
-MIC_sentiment_analysis_v/ ├── data/ # Folder to store the IMDb dataset ├── notebooks/ # Jupyter notebooks for experimentation │ └── MIC_sentiment_analysis.ipynb # Main analysis notebook ├── src/ # (Optional) Python scripts for modular code │ ├── preprocessing.py # Text cleaning and preprocessing functions │ ├── model.py # Model training and evaluation logic │ └── utils.py # Helper functions ├── requirements.txt # Python dependencies ├── LICENSE # MIT License └── README.md # Project documentation
+MIC_sentiment_analysis_v/
+├── data/                          # Folder to store the IMDb dataset
+├── notebooks/                     # Jupyter notebooks for experimentation
+│   └── MIC_sentiment_analysis.ipynb  # Main analysis notebook
+├── src/                           # Python scripts for modular code (optional)
+│   ├── preprocessing.py           # Text cleaning and preprocessing functions
+│   ├── model.py                   # Model training and evaluation logic
+│   └── utils.py                   # Helper functions
+├── requirements.txt               # Python dependencies
+├── LICENSE                        # MIT License
+└── README.md                      # Project documentation
 
 ### 5. Tech Stack
 1.Python 3.10+
