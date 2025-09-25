@@ -35,16 +35,16 @@ After training on 80% of the data, I evaluated both models on the remaining 20% 
 ### 4. Project structure 
 
 MIC_sentiment_analysis_v/
-├── data/                          # Folder to store the IMDb dataset
-├── notebooks/                     # Jupyter notebooks for experimentation
-│   └── MIC_sentiment_analysis.ipynb  # Main analysis notebook
-├── src/                           # Python scripts for modular code (optional)
-│   ├── preprocessing.py           # Text cleaning and preprocessing functions
-│   ├── model.py                   # Model training and evaluation logic
-│   └── utils.py                   # Helper functions
-├── requirements.txt               # Python dependencies
-├── LICENSE                        # MIT License
-└── README.md                      # Project documentation
+├── data/                          
+├── notebooks/                     
+│   └── MIC_sentiment_analysis.ipynb  
+├── src/                           
+│   ├── preprocessing.py           
+│   ├── model.py                   
+│   └── utils.py                   
+├── requirements.txt               
+├── LICENSE                        
+|── README.md                      
 
 ### 5. Tech Stack
 1.Python 3.10+
