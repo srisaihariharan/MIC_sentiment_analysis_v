@@ -32,6 +32,33 @@ A model can't understand words, so I needed to convert the cleaned reviews into 
 With the data prepared, I trained two different but powerful classification models: **Logistic Regression** and a **Linear Support Vector Classifier (SVC)**.
 
 After training on 80% of the data, I evaluated both models on the remaining 20% of unseen data to get an honest measure of their performance.
+### 4. Project structure 
+MIC_sentiment_analysis_v/
+│
+├── MIC_sentiment_analysis.ipynb   # Main notebook
+├── data/                          # IMDb dataset (upload manually)
+├── README.md                      # Project documentation
+└── requirements.txt               # Dependencies
+
+### 5. Tech Stack
+1.Python 3.10+
+2.scikit-learn    
+3.NLTK
+4.Pandas
+5.NumPy
+6.Jupyter Notebook
+
+### 6. clone the repo
+
+git clone https://github.com/srisaihariharan/MIC_sentiment_analysis_v.git
+cd MIC_sentiment_analysis_v
+
+### 7. Results
+
+| Model               | Accuracy  | Precision | Recall | F1-Score |
+|--------------------|-----------|-----------|--------|----------|
+| Logistic Regression| 87.98%    | 88.10%    | 87.50% | 87.80%   |
+| Linear SVC         | 86.45%    | 86.70%    | 86.20% | 86.45%   |
 
 **The Logistic Regression model was the top performer, achieving a final accuracy of 87.98%.**
 ---
@@ -50,5 +77,9 @@ To better understand the model's performance, I generated a confusion matrix, wh
 
 ---
 **Note: If the notebook below does not render correctly on GitHub, please [view it on nbviewer](https://nbviewer.org/github/srisaihariharan/MIC_sentiment_analysis_v/tree/main/)).**
+
 ---
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
